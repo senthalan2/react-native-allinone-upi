@@ -1,0 +1,62 @@
+import * as React from 'react';
+import { StyleSheet, Text, TouchableOpacity, SafeAreaView } from 'react-native';
+import { initiateTransaction } from 'react-native-allinone-upi';
+
+export default function App() {
+  const startTransaction = () => {
+    initiateTransaction({
+      upi: 'vasanthvel07@ybl',
+      transactionId: 'YYgddggd',
+      currency: 'INR',
+      merchantCategoryCode: '1234',
+      payeeName: 'test',
+      amount: '1',
+      note: 'test',
+    })
+      .then((res) => {
+        console.log(res, 'RESPONSE');
+      })
+      .catch((e) => {
+        console.log(e.message, 'ERRORRPAYMENT');
+      });
+  };
+
+  return (
+    <SafeAreaView style={styles.mainContainer}>
+      <TouchableOpacity style={styles.button} onPress={startTransaction}>
+        <Text style={styles.buttonText}>Start Payment</Text>
+      </TouchableOpacity>
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  mainContainer: {
+    flex: 1,
+    backgroundColor: '#ffffff',
+    paddingHorizontal: 15,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  button: {
+    paddingHorizontal: 10,
+    paddingVertical: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 20,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+    backgroundColor: 'tomato',
+    elevation: 3,
+  },
+  buttonText: {
+    fontWeight: 'bold',
+    fontSize: 16,
+    color: '#000000',
+  },
+});

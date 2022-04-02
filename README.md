@@ -37,14 +37,15 @@ import { initiateTransaction } from 'react-native-allinone-upi';
 Key | Value | Description  
 --- | --- | ---
 paymentStatus | -1 or 1 or 0 | ```-1``` - DATE MISSING OR INVALID, ```1``` - SUCCESS, ```0``` - FAILURE
-txnId | true or false | iT is about the Device is Approved or not. ```true``` - Approved, ```false``` - Not Approved  
-txnRef |JSON DATA | The device returns XML DATA of Device Information. this parameter contains converted JSON DATA of XML DATA
-missingData | [Missing Data](#missing-data) | Device Information
-responseCode | Code return from Payment App
+txnId | String  | Transaction ID return from the Payment App ( for Backend Process ) only return when the ```paymentStatus``` is ```1``` or ```0```
+txnRef |String | Transaction Reference ID return from the Payment App ( only return when the ```paymentStatus``` is ```1``` or ```0``` )
+missingData | [Missing Data](#missing-data) | Data which is missing or Invalid ( only return when the ```paymentStatus``` is ```-1``` )
+responseCode | String | Code return from the Payment App ( only return when the ```paymentStatus``` is ```1``` or ```0``` )
 message | Message about Success or Failure or Invalid Data
 
-#### Missing Data
+#### `Missing Data`
 
+`AMOUNT`, `UPI_ID`, `TRANSACTION_ID`, `CURRENCY`, `MERCHANT_CATEGORY_CODE`, `PAYEE_NAME`
 
 
 ## Contributing

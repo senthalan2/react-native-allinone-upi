@@ -20,7 +20,7 @@ import { initiateTransaction } from 'react-native-allinone-upi';
       transactionId: 'transaction_id',  // Required
       currency: 'INR',   // Currency Code (Required)
       merchantCategoryCode: 'Merchant Category Code',  // Four digit Code. (Required)
-      payeeName: 'Name of the Payee',  (Required)
+      payeeName: 'Name of the Payee', // Required 
       amount: '1',  // Amount must be in String and must be greater than 1.00 (Required)
       note: 'test', // Additional Notes or description (Optional)
     })

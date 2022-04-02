@@ -1,3 +1,5 @@
+import { Platform } from 'react-native';
+
 export interface UPITransactionProps {
   upi: string;
   transactionId: string;
@@ -23,15 +25,19 @@ export function UPIPayment(
   }
 ) {
   if (AMOUNT_REG.test(paymentData.amount)) {
-    return AllinoneUpi.initiateTransaction(
-      paymentData.upi,
-      paymentData.transactionId,
-      paymentData.currency,
-      paymentData.merchantCategoryCode,
-      paymentData.payeeName,
-      paymentData.amount,
-      paymentData.note
-    );
+    if (Platform.OS === 'android') {
+      return AllinoneUpi.initiateTransaction(
+        paymentData.upi,
+        paymentData.transactionId,
+        paymentData.currency,
+        paymentData.merchantCategoryCode,
+        paymentData.payeeName,
+        paymentData.amount,
+        paymentData.note
+      );
+    } else {
+      return Promise.reject('Not Supported');
+    }
   } else {
     return Promise.resolve({
       paymentStatus: -1,

@@ -39,11 +39,11 @@ Key | Value | Description
 paymentStatus | -1 or 1 or 0 | ```-1``` - DATE MISSING OR INVALID, ```1``` - SUCCESS, ```0``` - FAILURE
 txnId | true or false | iT is about the Device is Approved or not. ```true``` - Approved, ```false``` - Not Approved  
 txnRef |JSON DATA | The device returns XML DATA of Device Information. this parameter contains converted JSON DATA of XML DATA
-missingData | [`Missing` (`Data`)](#missing-data) | Device Information
+missingData | [Missing Data](#missing-data) | Device Information
 responseCode | Code return from Payment App
 message | Message about Success or Failure or Invalid Data
 
-#### `Missing` `Data`
+#### Missing Data
 
 
 

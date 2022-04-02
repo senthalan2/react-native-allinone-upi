@@ -43,7 +43,7 @@ missingData | [`Missing` (`Data`)](#missing-data) | Device Information
 responseCode | Code return from Payment App
 message | Message about Success or Failure or Invalid Data
 
-#### 'Missing' 'Data'
+#### `Missing` `Data`
 
 
 

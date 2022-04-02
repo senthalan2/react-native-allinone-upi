@@ -1,6 +1,6 @@
 # react-native-allinone-upi
 
-UPI Payment using installed UPI Payment Apps in Mobile. Currently, Supported oinly on Android.
+UPI Payment using installed UPI Payment Apps in Mobile. Currently, supported only on Android.
 
 ## Installation
 

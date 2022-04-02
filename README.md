@@ -36,12 +36,12 @@ import { initiateTransaction } from 'react-native-allinone-upi';
 
 Key | Value | Description  
 --- | --- | ---
-paymentStatus | -1 or 1 or 0 | ```-1``` - DATE MISSING OR INVALID, ```1``` - SUCCESS, ```0``` - FAILURE
+paymentStatus | -1 or 1 or 0 | ```-1``` - DATA MISSING OR INVALID, ```1``` - SUCCESS, ```0``` - FAILURE
 txnId | String  | Transaction ID return from the Payment App ( for Backend Process ) only return when the ```paymentStatus``` is ```1``` or ```0```
 txnRef |String | Transaction Reference ID return from the Payment App ( only return when the ```paymentStatus``` is ```1``` or ```0``` )
 missingData | [Missing Data](#missing-data) | Data which is missing or Invalid ( only return when the ```paymentStatus``` is ```-1``` )
 responseCode | String | Code return from the Payment App ( only return when the ```paymentStatus``` is ```1``` or ```0``` )
-message | Message about Success or Failure or Invalid Data
+message | String  | Message about Success or Failure or Invalid Data
 
 #### `Missing Data`
 

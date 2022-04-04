@@ -9,7 +9,7 @@ export interface UPITransactionProps {
   amount: string;
   note?: string | '';
 }
-const AMOUNT_REG = /^([1-9]+)?(?:[.][0-9]{1,2})?$/;
+const AMOUNT_REG = /^([0-9]+)?(?:[.][0-9]{1,2})?$/;
 export function UPIPayment(
   paymentData: UPITransactionProps,
   AllinoneUpi: {
@@ -24,7 +24,10 @@ export function UPIPayment(
     ) => any;
   }
 ) {
-  if (AMOUNT_REG.test(paymentData.amount)) {
+  if (
+    parseInt(paymentData.amount) >= 1 &&
+    AMOUNT_REG.test(paymentData.amount)
+  ) {
     if (Platform.OS === 'android') {
       return AllinoneUpi.initiateTransaction(
         paymentData.upi,

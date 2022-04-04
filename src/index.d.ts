@@ -16,7 +16,7 @@ declare module "react-native-allinone-upi" {
         paymentStatus : number,
         txnId : string,
         txnRef : string,
-        missingData : MissingDataTypes,
+        missingData? : MissingDataTypes,
         responseCode : string,
         message : string
 

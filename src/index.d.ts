@@ -10,13 +10,13 @@ declare module "react-native-allinone-upi" {
         note?: string | null;
       }
 
-      type MissingDataTypes = string | 'AMOUNT' | "UPI_ID" | "TRANSACTION_ID" | "CURRENCY" | "MERCHANT_CATEGORY_CODE" | "PAYEE_NAME" | undefined;
+    //   type MissingDataTypes = string | 'AMOUNT' | "UPI_ID" | "TRANSACTION_ID" | "CURRENCY" | "MERCHANT_CATEGORY_CODE" | "PAYEE_NAME" | undefined;
 
      export interface UPITransactionResponseProps {
         paymentStatus : number,
         txnId : string,
         txnRef : string,
-        missingData? : MissingDataTypes,
+        missingData? : string | 'AMOUNT' | "UPI_ID" | "TRANSACTION_ID" | "CURRENCY" | "MERCHANT_CATEGORY_CODE" | "PAYEE_NAME" | undefined,
         responseCode : string,
         message : string
 

@@ -5,19 +5,19 @@ import { initiateTransaction } from 'react-native-allinone-upi';
 export default function App() {
   const startTransaction = () => {
     initiateTransaction({
-      upi: 'vasanthvel07@ybl',
-      transactionId: 'YYgddggd',
+      upi: 'UPI_ID',
+      transactionId: 'TXN_ID',
       currency: 'INR',
-      merchantCategoryCode: '1234',
-      payeeName: 'test',
-      amount: '1',
-      note: 'test',
+      merchantCategoryCode: 'MCC',
+      payeeName: 'PAYEE_NAME',
+      amount: 'AMOUNT',
+      note: 'NOTE',
     })
       .then((res) => {
         console.log(res, 'RESPONSE');
       })
       .catch((e) => {
-        console.log(e.message, 'ERRORRPAYMENT');
+        console.log(e.message, 'ERRORR PAYMENT');
       });
   };
 

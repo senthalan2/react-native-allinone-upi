@@ -108,6 +108,7 @@ public class AllinoneUpiModule extends ReactContextBaseJavaModule implements Act
 
     WritableMap responseData = Arguments.createMap();
 
+
     try{
       if(data == null){
         handlePromise.reject("FAILURE","No Action Taken.Null from UPI");
@@ -136,7 +137,9 @@ public class AllinoneUpiModule extends ReactContextBaseJavaModule implements Act
       }
     }
     catch (Exception e){
-      handlePromise.reject("FAILURE",e.getMessage());
+      if(handlePromise != null){
+        handlePromise.reject("FAILURE",e.getMessage());
+      }
     }
 
   }

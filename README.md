@@ -168,6 +168,10 @@ console.log(upiString);
 | `FAILED` | `0` | Payment was cancelled, declined, or failed |
 | `SUCCESS` | `1` | Payment was successful (Android) or App opened successfully (iOS) |
 
+### `MissingDataTypes`
+
+`AMOUNT` | `UPI_ID` | `TRANSACTION_ID` | `CURRENCY` | `MERCHANT_CATEGORY_CODE` | `PAYEE_NAME`
+
 ---
 
 ## ⚠️ Important Note on Platform Differences
@@ -182,5 +186,13 @@ Therefore, on iOS, a `paymentStatus: 1` simply means the **UPI app was successfu
 
 ---
 
+## Contributing
+
+See the [Contributing](https://github.com/senthalan2/react-native-allinone-upi/?tab=contributing-ov-file) to learn how to contribute to the repository and the development workflow.
+
 ## 📄 License
 MIT 
+
+## Would you like to support me?
+
+<a href="https://www.buymeacoffee.com/senthalan2" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>

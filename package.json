@@ -1,7 +1,7 @@
 {
   "name": "react-native-allinone-upi",
   "version": "2.0.0",
-  "description": "UPI Payment using installed UPI Payment Apps in Mobile.",
+  "description": "A powerful and easy-to-use React Native library for integrating Unified Payments Interface (UPI) payments.",
   "main": "./src/index.ts",
   "types": "./src/index.d.ts",
   "exports": {

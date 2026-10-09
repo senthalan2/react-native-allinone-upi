@@ -75,7 +75,7 @@ class AllinoneUpiModule(reactContext: ReactApplicationContext) :
       intent.setPackage(appSpecific)
     }
 
-    val activity = currentActivity
+    val activity = getCurrentActivity()
     if (activity != null) {
       try {
         val chooser = if (appSpecific.isNotEmpty()) intent else Intent.createChooser(intent, "Pay with")
